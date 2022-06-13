@@ -1,3 +1,18 @@
+/*=========================================================================================================================================
+                                    DEFAULT VALUES                     :
+                    
+                                    Font Family                        : Roboto Condensed
+                                    Greenish Blue                      : #34c6d3(Bottons,Icons,Links,Lines & Backgrounds)
+                                    Steel Gray                         : #41464b(Headings)
+                                    Blue Bayoux                        : #64707b(Paragraphs)
+                                    White                              :#fff(Text with Black Backgrounds)
+                                    Black                              :#000
+
+
+=========================================================================================================================================*/
+
+/* Genearal CSS */
+
 html,
 body {
     height: 100%;
@@ -7,14 +22,20 @@ body {
     font-family: "Roboto Condensed", sans-serif;
 }
 
+p {
+    color: #64707b;
+    font-size: 16px;
+    font-weight: 300;
+}
+
 h3 {
+    color: #41464b;
     text-transform: uppercase;
 }
 
-/*========================
-    Home
-==========================*/
-
+/*=========================================================================================
+                                       HOME
+=========================================================================================*/
 
 #home {
     height: 100%;
@@ -23,9 +44,7 @@ h3 {
 #home-cover {
     height: 100%;
     background-image: url("../image/bg-home.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
 }
 
 #home-content-box {
@@ -37,7 +56,7 @@ h3 {
 #home-content-box-inner {
     display: table-cell;
     vertical-align: middle;
-    text-align: center;
+    /*  text-align: center;*/
 }
 
 #home-heading h3 {
@@ -45,12 +64,27 @@ h3 {
     font-size: 55px;
     font-weight: 700;
     margin: 20px 0 20px 0;
+
 }
 
-/*============================================
-BUTTONS (Generic)
-=============================================*/
-.btn-general{
+/*=========================================================================================
+                                       PARALLAX (Generic)
+=========================================================================================*/
+
+.bg-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+/*=========================================================================================
+                                       BUTTON (Generic)
+=========================================================================================*/
+
+.btn-general {
+    border-color: #fff;
     border-width: 2px;
     border-radius: 0;
     padding: 12px 26px 12px 26px;
@@ -59,12 +93,39 @@ BUTTONS (Generic)
     text-transform: uppercase;
 }
 
-.btn-white{
+.btn-white {
     border-color: #fff;
     color: #fff;
 }
 
-.btn-white:hover, .btn-white:focus{
+.btn-white:hover,
+.btn-white:focus {
     background-color: #fff;
     color: #41464b;
+}
+
+/*====================================================
+                       ANIMATE
+======================================================*/
+
+#home-cover,
+#home-heading,
+#home-btn {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+}
+
+#home-cover {
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+
+#home-heading {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+#home-btn {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
